@@ -1,6 +1,8 @@
 import express from 'express';
+import morgan from 'morgan';
 
 const app = express();
 
-app.listen(1080);
-console.log('Server listen in port 1080');
+app.use(morgan('dev'));
+
+export default app;
